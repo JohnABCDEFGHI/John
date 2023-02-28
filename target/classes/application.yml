@@ -1,0 +1,61 @@
+# 应用名称
+spring:
+  mail:
+    host: smtp.qq.com
+    default-encoding: UTF-8
+    username: yangzjyoda@foxmail.com
+    password: fqclygcctupwbfci
+    port: 587
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+          debug: true
+  application:
+    name: reggie
+
+  redis:
+    host: 115.239.213.68
+    port: 6379
+    password: 123456
+    timeout: 1000
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://115.239.213.68:3306/reggie?serverTimezone=UTC
+      username: root
+      password: Ee778877~
+  cache:
+    redis:
+      time-to-live: 1800000
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8080
+
+
+reggie:
+  path: D:\\upload\\
+
+qiniu:
+  accessKey: JhNEmJXK4XQ36LBa71Rve3uHXESCXBNh9sHTntH2
+  secretKey: UPXEPE_egUwngrqwkHERzBCmaAojKlf5rU00641h
+  bucket: 592636664
+  prefix: rknrnoljd.hn-bkt.clouddn.com
+
+
+#fqclygcctupwbfci  QQ邮箱授权码
+
+
+
+  #邮箱验证
+check:
+  #邮箱验证配置
+  mail:
+    sender: yangzjyoda@foxmail.com                  #发送者
+    subject: 本次登录的验证码为            #邮箱标题
+    str1: 【 】你的验证码为【
+    str2: 】(若不是本人操作，可忽略该条邮件)
